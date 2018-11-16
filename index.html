@@ -8,17 +8,60 @@
 
   <!--  Links  -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css" />
     <!--  Scripts  -->
-  <script     src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-  </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 
 </head>
 <body>
-  
-  <script type="text/javascript" href="./js/app.js" ></script>
+  <div class="container">
+    <div class="row">
+      <div class="span4 offset3">
+        <h2>Weather App</h2>
+        <p>Enter city name to get the weather forecast</p>
+      </div>
+      <div class="spac6 offset1">
+        <input type="text" class="span4" placeholder="Enter the city" id="city-name" value="" />
+      </div>
+    </div>
+    <!-- row -->
+    <div class="row">
+      <div class="span6 offset1">
+        <input type="button" class="btn-primary btn btn-metric" value="Get forecast in metric" />
+      </div>
+      <div class="span6 offset1">
+        <input type="button" class="btn-primary btn btn-imperial" value="Get forecast in imperial" />
+      </div>
+      <div class="span3">
+        <p id="info"></p>
+      </div>
+    </div>  
+    <!-- row -->
+    <div class="row">
+      <div class="span6 offset1">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Temp</th>
+              <th scope="col">Wind</th>
+            </tr>
+          </thead>
+          <tbody id=log>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--  row  -->
+    <div class="row">
+      <hr />
+      <p>Mark Kim(<a href="http://markjnkim.com">markjnkim.com</a>)</p>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/api.js" ></script>
 </body>
 </html>
