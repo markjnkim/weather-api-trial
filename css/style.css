@@ -1,0 +1,35 @@
+body {
+  margin: 30px auto;
+}
+
+.btn {
+  margin-left: 5px;
+}
+
+#header {
+  margin: 20px 0;
+}
+
+#menu a:link {
+  color: red !important;
+}
+
+#menu a:visited {
+  color: green !important;
+}
+
+#menu a:hover {
+  color: black !important;
+}
+
+#menu a:active {
+  color: purple !important;
+}
+th {
+  border: solid 2px red;
+  min-width: 125px;
+}
+
+td {
+  align-content: center;
+}

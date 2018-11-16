@@ -14,10 +14,10 @@ var prepareData = function(units) {
 }
 
 $(document).ready(function() {
-  $('.btn-metric').click(function() {
+  $('.btn-metric, #celsius, #kmph').click(function() {
     prepareData('metric')
   })
-  $('.btn-imperial').click(function() {
+  $('.btn-imperial, #faht, #mph').click(function() {
     prepareData('imperial')
   })
 })
@@ -39,12 +39,14 @@ function fetchData(forecast) {
   console.log(forecast);
   var html= '',
       cityName = forecast.city.name,
-      country = forecast.city.country
+      country = forecast.city.country,
+      header='';
 
-    // html += '<h3> Weather Forecast for ' + cityName + ', ' + country + '</h3>';
+    header += '<h3> Weather Forecast for ' + cityName + ', ' + country + '</h3>';
     forecast.list.forEach(function(forecastEntry, index, list) {
-      html += '<td>' + forecastEntry.dt_txt + ': ' + forecastEntry.main.temp + '</td>'
+      html += '<tr>' + '<td>' + forecastEntry.dt_txt + '</td>' + '<td>' + forecastEntry.main.temp + '</td>' + '<td>' + forecastEntry.wind.speed +'</td>' + '<td>' + forecastEntry.main.humidity +'</td>' + '<td>' + forecastEntry.weather[0].description +'</td>' + '<tr>';
     })
 
-    $('#log').html(html)
+    $('#log').html(html);
+    $('#header').html(header);
 }

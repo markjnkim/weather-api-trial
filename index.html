@@ -23,7 +23,7 @@
         <h2>Weather App</h2>
         <p>Enter city name to get the weather forecast</p>
       </div>
-      <div class="spac6 offset1">
+      <div class="span6 offset1">
         <input type="text" class="span4" placeholder="Enter the city" id="city-name" value="" />
       </div>
     </div>
@@ -43,15 +43,20 @@
     <div class="row">
       <div class="span6 offset1">
         <table class="table">
+          <div id="header">
+            <!-- insert js header for cityName Country -->
+          </div>
           <thead>
-            <tr>
-              <th scope="col">Date</th>
-              <th scope="col">Temp</th>
-              <th scope="col">Wind</th>
+            <tr id="menu">
+              <th scope="col">Date/Time</th>
+              <th scope="col">Temp <a href="#" id="faht">(F) </a><a href="#" class="active" id="celsius">(C) </a></th>
+              <th scope="col">Wind <a href="#" id="mph">(mph) </a> <a href="#" id="kmph">(km/h)</a></th>
+              <th scope="col">Humidity %</th>
+              <th >Description</th>
             </tr>
           </thead>
           <tbody id=log>
-
+            <!-- DATA -->
           </tbody>
         </table>
       </div>
